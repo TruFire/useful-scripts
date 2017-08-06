@@ -16,4 +16,5 @@ export npm_config_prefix=~/heap/.node_modules
 alias ls='ls --color=auto'
 alias wally='/home/emerall/watchLily.sh'
 alias ll='ls -l -h'
+alias drive='/home/emerall/drive.sh'
 
