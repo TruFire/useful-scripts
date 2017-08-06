@@ -5,9 +5,10 @@ then
 	do
 		inotifywait "$1"
 		lilypond "$1"
-		if [ -z "$(pgrep evince)" ]
+		OUTPUT_FILE="${1%.ly}.pdf"
+		if [ -e "$OUTPUT_FILE" ] && [ -z "$(pgrep evince)" ]
 		then
-			evince "${1%.ly}.pdf" &
+			evince "$OUTPUT_FILE" &
 		fi
 	done
 else
